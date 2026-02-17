@@ -1,10 +1,12 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 
 export default function VideoPlayer() {
   const videoRef = useRef(null);
   const [playing, setPlaying] = useState(false);
+  const t = useTranslations("demo");
 
   const handlePlay = () => {
     videoRef.current?.play();
@@ -15,10 +17,10 @@ export default function VideoPlayer() {
       <button
         className={`play-overlay ${playing ? "is-hidden" : ""}`}
         type="button"
-        aria-label="Play demo video"
+        aria-label={t("playLabel")}
         onClick={handlePlay}
       >
-        <span>Play</span>
+        <span>{t("playText")}</span>
       </button>
       <video
         ref={videoRef}
@@ -30,7 +32,7 @@ export default function VideoPlayer() {
         onEnded={() => setPlaying(false)}
       >
         <source src="/demo-video.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
+        {t("videoFallback")}
       </video>
     </div>
   );

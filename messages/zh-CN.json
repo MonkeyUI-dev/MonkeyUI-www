@@ -1,0 +1,102 @@
+{
+  "metadata": {
+    "title": "Design Monkey — AI UI 的风格 DNA",
+    "description": "上传参考设计图，Design Monkey 自动提取风格 DNA 并通过 MCP 注入你的 IDE，让 AI 生成的 UI 风格统一，告别 AI 味。"
+  },
+  "nav": {
+    "evidence": "效果对比",
+    "how": "工作原理",
+    "faq": "常见问题",
+    "apply": "申请"
+  },
+  "hero": {
+    "eyebrow": "种子用户计划 · 限 10 个名额",
+    "title": "将参考设计转化为可复用的",
+    "titleAccent": "风格 DNA",
+    "lead": "上传你的参考设计图，Design Monkey 自动提取风格 DNA 并通过 MCP 注入你的 IDE，让 AI 生成的 UI 风格统一，告别 AI 味，大幅减少提示词调整次数。",
+    "ctaPrimary": "申请成为种子用户",
+    "ctaSecondary": "观看 15 秒演示",
+    "bestFitLabel": "最佳人选",
+    "bestFitDesc": "未来 7 天内有实际页面开发需求的开发者。",
+    "zeroDesignLabel": "零设计门槛",
+    "zeroDesignDesc": "选一张好的参考图，剩下的交给风格 DNA。"
+  },
+  "evidence": {
+    "title": "效果对比",
+    "subtitle": "相同需求。左：无风格注入。右：使用 Design Monkey。",
+    "before": "使用前",
+    "after": "使用后",
+    "beforeAlt": "未注入风格的 UI",
+    "afterAlt": "应用风格 DNA 后的 UI"
+  },
+  "demo": {
+    "title": "15 秒工作流演示",
+    "subtitle": "从参考图 → 风格提取 → IDE 生成，一气呵成。",
+    "playLabel": "播放演示视频",
+    "playText": "播放",
+    "videoFallback": "您的浏览器不支持视频播放。"
+  },
+  "steps": {
+    "title": "工作原理",
+    "subtitle": "三步实现从灵感到高质量 UI 的跨越。",
+    "step1Title": "选择参考图",
+    "step1Desc": "挑选一张风格统一、包含常见组件的 UI 截图。",
+    "step2Title": "提取风格 DNA",
+    "step2Desc": "我们自动解析颜色、排版、圆角、阴影、间距和组件风格。",
+    "step3Title": "在 IDE 中生成",
+    "step3Desc": "连接 MCP，让 AI 生成的 UI 默认匹配参考设计。"
+  },
+  "effort": {
+    "title": "你需要准备什么",
+    "subtitle": "明确期望，确保首次体验顺畅。",
+    "referenceTitle": "参考图质量很重要",
+    "referenceItems": [
+      "1 张视觉风格统一的清晰截图。",
+      "如果可能，包含按钮、表单和卡片等组件。",
+      "如果风格不够稳定，可能需要第二张参考图。"
+    ],
+    "timeTitle": "时间预算",
+    "timeItems": [
+      "10–20 分钟完成设置和首次生成。",
+      "在 7 天内用于实际页面开发。",
+      "分享反馈，帮助我们改进提取器。"
+    ]
+  },
+  "faq": {
+    "title": "常见问题",
+    "subtitle": "为准备开始构建的种子用户提供的简要解答。",
+    "items": [
+      {
+        "question": "我需要具备设计技能吗？",
+        "answer": "不需要。只要选一张好的参考图就够了。"
+      },
+      {
+        "question": "什么样的参考图是好的？",
+        "answer": "一张视觉风格统一的清晰截图。包含按钮、表单和卡片会更有帮助。"
+      },
+      {
+        "question": "支持哪些 IDE？",
+        "answer": "Cursor、GitHub Copilot 以及主流 IDE。"
+      },
+      {
+        "question": "我目前没有实际页面要开发，应该申请吗？",
+        "answer": "可能不太合适。我们优先选择能在 7 天内将其用于实际任务的申请者。"
+      }
+    ]
+  },
+  "applySection": {
+    "title": "申请成为种子用户",
+    "subtitle": "我们根据实际使用场景、参考图质量和反馈意愿进行筛选。",
+    "emailLabel": "电子邮件地址",
+    "emailPlaceholder": "请输入您的邮箱地址",
+    "submitButton": "申请"
+  },
+  "footer": {
+    "tagline": "Design Monkey · AI 生成 UI 的风格 DNA",
+    "note": "种子用户计划 — 仅限 10 个团队。"
+  },
+  "languageSwitcher": {
+    "en": "EN",
+    "zh-CN": "简体中文"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "metadata": {
+    "title": "Design Monkey — Style DNA for AI UI",
+    "description": "Bring your own reference image. Design Monkey extracts the style DNA and injects it into your IDE via MCP, so AI-generated UI looks consistent and less AI-ish."
+  },
+  "nav": {
+    "evidence": "Evidence",
+    "how": "How it works",
+    "faq": "FAQ",
+    "apply": "Apply"
+  },
+  "hero": {
+    "eyebrow": "Seed-user program · 10 spots",
+    "title": "Turn reference designs into reusable",
+    "titleAccent": "style DNA",
+    "lead": "Bring your own reference image. Design Monkey extracts the style DNA and injects it into your IDE via MCP, so AI-generated UI looks consistent and less \"AI-ish\" with far fewer prompt iterations.",
+    "ctaPrimary": "Apply to be a seed user",
+    "ctaSecondary": "Watch 15s demo",
+    "bestFitLabel": "Best fit",
+    "bestFitDesc": "Developers building real pages in the next 7 days.",
+    "zeroDesignLabel": "Zero design skills",
+    "zeroDesignDesc": "Pick a good reference and let the style DNA do the rest."
+  },
+  "evidence": {
+    "title": "Before / After",
+    "subtitle": "Same requirement. Left: no style injection. Right: with Design Monkey.",
+    "before": "Before",
+    "after": "After",
+    "beforeAlt": "UI without style injection",
+    "afterAlt": "UI with style DNA applied"
+  },
+  "demo": {
+    "title": "15-second workflow demo",
+    "subtitle": "Reference → extraction → IDE generation, in one smooth pass.",
+    "playLabel": "Play demo video",
+    "playText": "Play",
+    "videoFallback": "Your browser does not support the video tag."
+  },
+  "steps": {
+    "title": "How it works",
+    "subtitle": "Three steps from inspiration to production-quality UI.",
+    "step1Title": "Choose a reference",
+    "step1Desc": "Pick a single UI image with consistent style and common components.",
+    "step2Title": "Extract style DNA",
+    "step2Desc": "We derive color, typography, radii, shadow, spacing, and component vibe.",
+    "step3Title": "Generate in your IDE",
+    "step3Desc": "Connect MCP and let AI-generated UI match the reference by default."
+  },
+  "effort": {
+    "title": "What you'll need",
+    "subtitle": "Set expectations clearly for a smooth first run.",
+    "referenceTitle": "Reference quality matters",
+    "referenceItems": [
+      "1 clear image with consistent visual style.",
+      "Include buttons, forms, and cards if possible.",
+      "A second reference may be needed if style is unstable."
+    ],
+    "timeTitle": "Time budget",
+    "timeItems": [
+      "10–20 minutes for setup + first generation.",
+      "Try it on a real page within 7 days.",
+      "Share feedback so we can improve the extractor."
+    ]
+  },
+  "faq": {
+    "title": "FAQ",
+    "subtitle": "Short answers for seed users who are ready to build.",
+    "items": [
+      {
+        "question": "Do I need design skills?",
+        "answer": "No. Picking a good reference is enough."
+      },
+      {
+        "question": "What makes a good reference image?",
+        "answer": "A clear image with consistent visual style. Including buttons, forms, and cards helps."
+      },
+      {
+        "question": "Which IDEs are supported?",
+        "answer": "Cursor, GitHub Copilot, and mainstream IDEs."
+      },
+      {
+        "question": "I don't have a real page to build right now. Should I apply?",
+        "answer": "Probably not. We prioritize applicants who can try it on a real task within 7 days."
+      }
+    ]
+  },
+  "applySection": {
+    "title": "Apply to be a seed user",
+    "subtitle": "Selection is based on a real use case, reference quality, and willingness to give feedback.",
+    "emailLabel": "Email address",
+    "emailPlaceholder": "Enter your email address",
+    "submitButton": "Apply"
+  },
+  "footer": {
+    "tagline": "Design Monkey · Style DNA for AI-generated UI",
+    "note": "Seed-user program — limited to 10 teams."
+  },
+  "languageSwitcher": {
+    "en": "EN",
+    "zh-CN": "简体中文"
+  }
+}
