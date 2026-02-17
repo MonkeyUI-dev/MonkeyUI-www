@@ -151,6 +151,120 @@ body::after {
   justify-self: end;
 }
 
+/* ── Language Switcher ── */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  justify-self: end;
+}
+
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  position: relative;
+}
+
+/* ── Language Switcher Custom Dropdown ── */
+.lang-switcher {
+  position: relative;
+  font-family: var(--font-family-display);
+}
+
+.lang-trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-lilac);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  color: var(--color-ink-muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.lang-trigger:hover,
+.lang-trigger.is-open {
+  border-color: var(--color-primary-soft);
+  background: var(--color-lilac);
+  color: var(--color-ink);
+}
+
+.lang-arrow {
+  transition: transform 0.2s ease;
+  width: 0.6rem;
+  height: 0.6rem;
+  opacity: 0.6;
+}
+
+.lang-trigger.is-open .lang-arrow {
+  transform: rotate(180deg);
+}
+
+.lang-dropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  width: 100%;
+  min-width: 9rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-lilac);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: 0.4rem;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  opacity: 0;
+  transform: translateY(-0.5rem);
+  animation: dropdownFadeIn 0.2s ease forwards;
+}
+
+@keyframes dropdownFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.lang-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  padding: 0.5rem 0.8rem;
+  border: none;
+  background: transparent;
+  color: var(--color-ink-muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: var(--font-family-display);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background 0.1s ease, color 0.1s ease;
+  width: 100%;
+}
+
+.lang-option:hover {
+  background: var(--color-lilac);
+  color: var(--color-ink);
+}
+
+.lang-option.active {
+  background: var(--color-lilac);
+  color: var(--color-primary);
+}
+
+.lang-option .check {
+  font-size: 0.8rem;
+  color: var(--color-primary);
+}
+
 .nav-links a:not(.btn) {
   color: var(--color-ink-muted);
   text-decoration: none;
