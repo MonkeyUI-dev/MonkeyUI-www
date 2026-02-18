@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Design Monkey — Style DNA for AI-generated UI
 
-## Getting Started
+> **Seed-user program · 10 spots** — [Apply now](https://designmonkey.ai)
 
-First, run the development server:
+Design Monkey turns any reference UI screenshot into *style DNA* — a structured description of colors, typography, spacing, radii, and shadows — and injects it into your IDE via the **Model Context Protocol (MCP)**. The result: AI-generated UI that looks consistent and on-brand, with far fewer prompt iterations.
+
+---
+
+## What this repo is
+
+This is the **public marketing website** for Design Monkey (`designmonkey-www`). It is a single-page, bilingual landing page built with Next.js and deployed on Vercel.
+
+**Live site:** [https://designmonkey.ai](https://designmonkey.ai)
+
+---
+
+## Tech stack
+
+- **[Next.js 16](https://nextjs.org/)** — App Router with React Server Components
+- **React 19**
+- **[Tailwind CSS v4](https://tailwindcss.com/)** — utility classes + custom design tokens via CSS custom properties
+- **[next-intl v4](https://next-intl-docs.vercel.app/)** — i18n routing and translations (English + Simplified Chinese)
+- **Google Fonts** — Nunito, Quicksand, Caveat via `next/font`
+- **ESLint 9** — Next.js core web vitals rules
+
+---
+
+## Getting started
 
 ```bash
+# Install dependencies
+npm install
+
+# Start the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the site. The page auto-updates as you edit files.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Other commands
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build   # Production build
+npm start       # Start production server
+npm run lint    # Run ESLint
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Project structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+designmonkey-www/
+├── messages/               # Translation files
+│   ├── en.json             # English
+│   └── zh-CN.json          # Simplified Chinese
+├── public/                 # Static assets (images, video)
+└── src/
+    ├── middleware.js        # Locale routing middleware (next-intl)
+    ├── i18n/               # i18n configuration
+    └── app/
+        └── [locale]/
+            ├── layout.js   # Root layout (fonts, metadata, i18n provider)
+            ├── page.js     # Landing page (all sections)
+            ├── globals.css # Design tokens + all styles
+            └── components/
+                ├── LanguageSwitcher.js
+                └── VideoPlayer.js
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+For a full breakdown of conventions and how the codebase is structured, see [Agent.md](./Agent.md).
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Internationalization
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The site supports **English** (`/en`) and **Simplified Chinese** (`/zh-CN`). All user-facing strings live in the `messages/` directory. The default locale is `en`.
+
+To contribute a translation or fix a string, edit the relevant key in both `messages/en.json` and `messages/zh-CN.json`.
+
+---
+
+## Contributing
+
+Contributions are welcome! Please:
+
+1. Fork the repository and create a feature branch.
+2. Keep changes focused — one concern per pull request.
+3. Ensure `npm run lint` passes before submitting.
+4. Open a pull request with a clear description of what changed and why.
+
+If you're making substantial changes, please open an issue first to discuss the approach.
+
+---
+
+## Deployment
+
+The site is deployed on [Vercel](https://vercel.com). Every push to `main` triggers an automatic deployment. Preview deployments are created for all pull requests.
+
+To deploy your own fork:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/ZhenhangTung/designmonkey-www)
+
+---
+
+## License
+
+MIT — see [LICENSE](./LICENSE) for details.
