@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import VideoPlayer from "./components/VideoPlayer";
 import LanguageSwitcher from "./components/LanguageSwitcher";
+import MobileNav from "./components/MobileNav";
 
 export default function Home() {
   const t = useTranslations();
@@ -26,6 +27,7 @@ export default function Home() {
             <LanguageSwitcher />
             <a className="btn ghost nav-apply" href="#apply">{t("nav.apply")}</a>
           </div>
+          <MobileNav />
         </div>
       </header>
 
