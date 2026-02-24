@@ -119,6 +119,8 @@ body::after {
   display: flex;
   justify-content: center;
   padding: var(--space-2) 0 var(--space-4);
+  position: relative;
+  z-index: 110; /* above mobile-menu overlay (z:100) so hamburger stays clickable */
 }
 
 .logo {
@@ -266,6 +268,12 @@ body::after {
   backdrop-filter: blur(0.8rem);
   box-shadow: var(--shadow-soft);
   z-index: 20;
+}
+
+/* In mobile menu footer, open dropdown upward so it doesn't clip below the viewport */
+.mobile-menu-footer .lang-dropdown {
+  top: auto;
+  bottom: calc(100% + 0.35rem);
 }
 
 .lang-option {
@@ -898,6 +906,8 @@ video {
   padding: 0;
   transition: background 0.2s ease, border-color 0.2s ease;
   -webkit-tap-highlight-color: transparent;
+  position: relative;
+  z-index: 110; /* above mobile-menu (z:100) so it stays clickable */
 }
 
 .mobile-hamburger:hover {
