@@ -1,29 +1,27 @@
 {
   "metadata": {
-    "title": "Design Monkey — Style DNA for AI UI",
-    "description": "Bring your own reference image. Design Monkey extracts the style DNA and injects it into your IDE via MCP, so AI-generated UI looks consistent and less AI-ish."
+    "title": "MonkeyUI — Style DNA for AI UI",
+    "description": "Guide AI with a reference so your UI looks intentional and consistent, without having to think like a designer."
   },
   "nav": {
-    "evidence": "Evidence",
+    "evidence": "Case",
     "how": "How it works",
     "faq": "FAQ",
-    "apply": "Apply"
+    "apply": "Contact"
   },
   "hero": {
-    "eyebrow": "Seed-user program · 10 spots",
-    "title": "Turn reference designs into reusable",
-    "titleAccent": "style DNA",
-    "lead": "Bring your own reference image. Design Monkey extracts the style DNA and injects it into your IDE via MCP, so AI-generated UI looks consistent and less \"AI-ish\" with far fewer prompt iterations.",
-    "ctaPrimary": "Apply to be a seed user",
+    "title": "Less \"AI-ish\" UI.",
+    "titleMore": "More",
+    "titleAccent": "product-quality",
+    "titleEnd": "UI.",
+    "lead": "Guide AI with a reference so your UI looks intentional and consistent, without having to \"think like a designer.\"",
+    "ctaPrimary": "Contact for access",
     "ctaSecondary": "Watch 15s demo",
-    "bestFitLabel": "Best fit",
-    "bestFitDesc": "Developers building real pages in the next 7 days.",
-    "zeroDesignLabel": "Zero design skills",
-    "zeroDesignDesc": "Pick a good reference and let the style DNA do the rest."
+    "githubLink": "View on Github"
   },
   "evidence": {
     "title": "Before / After",
-    "subtitle": "Same requirement. Left: no style injection. Right: with Design Monkey.",
+    "subtitle": "Same requirement. Left: no style injection. Right: with MonkeyUI.",
     "before": "Before",
     "after": "After",
     "beforeAlt": "UI without style injection",
@@ -38,61 +36,58 @@
   },
   "steps": {
     "title": "How it works",
-    "subtitle": "Three steps from inspiration to production-quality UI.",
-    "step1Title": "Choose a reference",
-    "step1Desc": "Pick a single UI image with consistent style and common components.",
-    "step2Title": "Extract style DNA",
-    "step2Desc": "We derive color, typography, radii, shadow, spacing, and component vibe.",
-    "step3Title": "Generate in your IDE",
-    "step3Desc": "Connect MCP and let AI-generated UI match the reference by default."
-  },
-  "effort": {
-    "title": "What you'll need",
-    "subtitle": "Set expectations clearly for a smooth first run.",
-    "referenceTitle": "Reference quality matters",
-    "referenceItems": [
-      "1 clear image with consistent visual style.",
-      "Include buttons, forms, and cards if possible.",
-      "A second reference may be needed if style is unstable."
-    ],
-    "timeTitle": "Time budget",
-    "timeItems": [
-      "10–20 minutes for setup + first generation.",
-      "Try it on a real page within 7 days.",
-      "Share feedback so we can improve the extractor."
-    ]
+    "step1Num": "1)",
+    "step1Title": "Pick a reference",
+    "step1Desc": "Choose a UI you consider \"good.\"",
+    "step2Num": "2)",
+    "step2Title": "We learn the look",
+    "step2Desc": "Automatically extract the key style decisions. Leave your <strong>WeChat ID</strong>. I'll reach out in <strong>24–48 hours</strong> to confirm fit and grant access.",
+    "step3Num": "3)",
+    "step3Title": "AI follows the style",
+    "step3Desc": "So you can build without designing from scratch."
   },
   "faq": {
     "title": "FAQ",
     "subtitle": "Short answers for seed users who are ready to build.",
     "items": [
       {
-        "question": "Do I need design skills?",
-        "answer": "No. Picking a good reference is enough."
+        "question": "Q: What is MonkeyUI?",
+        "answer": "A: It extracts a \"style DNA\" from a UI reference you like (colors, typography scale, radius, shadows, spacing rhythm, component vibe), so AI-generated or AI-edited UI looks intentional and consistent, not like the generic default \"AI look.\""
       },
       {
-        "question": "What makes a good reference image?",
-        "answer": "A clear image with consistent visual style. Including buttons, forms, and cards helps."
+        "question": "Q: What kind of reference do I need? Is one screenshot enough?",
+        "answer": "A: One screenshot is enough to start. For best results, pick a high-quality screen that includes common components (buttons, forms, lists, cards). More coverage means a stronger signal and better consistency."
       },
       {
-        "question": "Which IDEs are supported?",
-        "answer": "Cursor, GitHub Copilot, and mainstream IDEs."
+        "question": "Q: Which IDEs are supported?",
+        "answer": "A: Cursor, GitHub Copilot, and mainstream IDEs."
       },
       {
-        "question": "I don't have a real page to build right now. Should I apply?",
-        "answer": "Probably not. We prioritize applicants who can try it on a real task within 7 days."
+        "question": "Q: Can it match the reference 100%?",
+        "answer": "A: It is not aiming for pixel-perfect replication. The goal is consistent, product-quality style rules—type scale, color usage, radius/shadow intensity, and spacing density."
+      },
+      {
+        "question": "Q: Which stacks are supported (React/Vue/Tailwind/native)?",
+        "answer": "A: Style DNA is framework-agnostic. You can map it to Tailwind tokens, CSS variables, or your component library theme."
+      },
+      {
+        "question": "Q: Why do I need to contact you for access?",
+        "answer": "A: This is early access. We confirm your use case and expectations first, then grant access and collect feedback to iterate quickly."
       }
     ]
   },
   "applySection": {
-    "title": "Apply to be a seed user",
-    "subtitle": "Selection is based on a real use case, reference quality, and willingness to give feedback.",
-    "emailLabel": "Email address",
-    "emailPlaceholder": "Enter your email address",
-    "submitButton": "Apply"
+    "title": "Get early access",
+    "subtitle": "Leave your <strong>WeChat ID</strong>. I'll reach out in <strong>24–48 hours</strong> to confirm fit and grant access.",
+    "contactLabel": "WeChat or X ID",
+    "contactPlaceholder": "Your WeChat ID or X ID (so I can contact you)",
+    "submitButton": "Request access",
+    "privacyNote": "Used only for access and feedback. No marketing.",
+    "dmLink": "Prefer to DM? 小红书：@小里产品手册 →",
+    "dmUrl": "https://xhslink.com/m/AW7330vVqNs"
   },
   "footer": {
-    "tagline": "Design Monkey · Style DNA for AI-generated UI",
+    "tagline": "MonkeyUI · Style DNA for AI-generated UI",
     "note": "Seed-user program — limited to 10 teams."
   },
   "languageSwitcher": {
