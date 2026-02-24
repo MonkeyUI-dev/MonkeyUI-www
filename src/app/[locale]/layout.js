@@ -1,26 +1,14 @@
-import { Nunito, Quicksand, Caveat } from "next/font/google";
+import { Inter } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import "./globals.css";
 
-const nunito = Nunito({
-  variable: "--font-nunito-var",
+const inter = Inter({
+  variable: "--font-inter-var",
   subsets: ["latin"],
-  weight: ["400", "600", "700", "800"],
-});
-
-const quicksand = Quicksand({
-  variable: "--font-quicksand-var",
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-});
-
-const caveat = Caveat({
-  variable: "--font-caveat-var",
-  subsets: ["latin"],
-  weight: ["600"],
+  weight: ["300", "400", "500", "600"],
 });
 
 export function generateStaticParams() {
@@ -50,7 +38,7 @@ export default async function RootLayout({ children, params }) {
     <html lang={locale} suppressHydrationWarning>
       <body
         suppressHydrationWarning
-        className={`${nunito.variable} ${quicksand.variable} ${caveat.variable}`}
+        className={`${inter.variable}`}
       >
         <NextIntlClientProvider messages={messages}>
           {children}

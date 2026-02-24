@@ -11,13 +11,18 @@ export default function Home() {
       {/* ── Navigation ── */}
       <header className="nav">
         <div className="nav-pill">
-          <div className="logo nav-logo">Design Monkey</div>
+          <div className="logo nav-logo">MonkeyUI</div>
           <nav className="nav-links" aria-label="Primary">
             <a href="#evidence">{t("nav.evidence")}</a>
             <a href="#how">{t("nav.how")}</a>
             <a href="#faq">{t("nav.faq")}</a>
           </nav>
           <div className="nav-actions">
+            <a className="nav-github" href="https://github.com/MonkeyUI-dev/MonkeyUI" target="_blank" rel="noreferrer" aria-label="GitHub">
+              <svg height="20" width="20" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+              </svg>
+            </a>
             <LanguageSwitcher />
             <a className="btn ghost nav-apply" href="#apply">{t("nav.apply")}</a>
           </div>
@@ -30,29 +35,16 @@ export default function Home() {
           <div className="doodles hero-doodles" aria-hidden="true">
             <span className="blob blob-hero-1"></span>
             <span className="blob blob-hero-2"></span>
-            <span className="sparkle sparkle-hero-1"></span>
-            <svg className="doodle doodle-arrow-hero" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
-              <path d="M10 90 C40 40, 80 40, 110 20" />
-              <path d="M92 22 L110 20 L104 38" />
-            </svg>
           </div>
           <div className="hero-copy">
-            <p className="eyebrow">{t("hero.eyebrow")}</p>
-            <h1>{t("hero.title")} <span className="accent">{t("hero.titleAccent")}</span></h1>
+            <h1>
+              {t("hero.title")} <br className="hidden sm:block" />
+              {t("hero.titleMore")} <span className="accent">{t("hero.titleAccent")}</span> {t("hero.titleEnd")}
+            </h1>
             <p className="lead">{t("hero.lead")}</p>
             <div className="cta-row">
               <a className="btn primary" href="#apply">{t("hero.ctaPrimary")}</a>
               <a className="btn subtle" href="#demo">{t("hero.ctaSecondary")}</a>
-            </div>
-            <div className="meta">
-              <div>
-                <span className="kicker">{t("hero.bestFitLabel")}</span>
-                <p>{t("hero.bestFitDesc")}</p>
-              </div>
-              <div>
-                <span className="kicker">{t("hero.zeroDesignLabel")}</span>
-                <p>{t("hero.zeroDesignDesc")}</p>
-              </div>
             </div>
           </div>
         </section>
@@ -113,50 +105,29 @@ export default function Home() {
         <section className="steps" id="how" aria-label="How it works">
           <div className="section-head">
             <h2>{t("steps.title")}</h2>
-            <p>{t("steps.subtitle")}</p>
           </div>
           <div className="step-grid">
             <article>
-              <span>01</span>
-              <h3>{t("steps.step1Title")}</h3>
+              <div className="step-head">
+                <span className="step-num">{t("steps.step1Num")}</span>
+                <h3>{t("steps.step1Title")}</h3>
+              </div>
               <p>{t("steps.step1Desc")}</p>
             </article>
             <article>
-              <span>02</span>
-              <h3>{t("steps.step2Title")}</h3>
-              <p>{t("steps.step2Desc")}</p>
+              <div className="step-head">
+                <span className="step-num">{t("steps.step2Num")}</span>
+                <h3>{t("steps.step2Title")}</h3>
+              </div>
+              <p dangerouslySetInnerHTML={{ __html: t.raw("steps.step2Desc") }} />
             </article>
             <article>
-              <span>03</span>
-              <h3>{t("steps.step3Title")}</h3>
+              <div className="step-head">
+                <span className="step-num">{t("steps.step3Num")}</span>
+                <h3>{t("steps.step3Title")}</h3>
+              </div>
               <p>{t("steps.step3Desc")}</p>
             </article>
-          </div>
-        </section>
-
-        {/* ── What you'll need ── */}
-        <section className="effort" aria-label="User effort">
-          <div className="section-head">
-            <h2>{t("effort.title")}</h2>
-            <p>{t("effort.subtitle")}</p>
-          </div>
-          <div className="effort-grid">
-            <div className="effort-card">
-              <h3>{t("effort.referenceTitle")}</h3>
-              <ul>
-                {[0, 1, 2].map((i) => (
-                  <li key={i}>{t(`effort.referenceItems.${i}`)}</li>
-                ))}
-              </ul>
-            </div>
-            <div className="effort-card">
-              <h3>{t("effort.timeTitle")}</h3>
-              <ul>
-                {[0, 1, 2].map((i) => (
-                  <li key={i}>{t(`effort.timeItems.${i}`)}</li>
-                ))}
-              </ul>
-            </div>
           </div>
         </section>
 
@@ -167,7 +138,7 @@ export default function Home() {
             <p>{t("faq.subtitle")}</p>
           </div>
           <div className="faq-grid">
-            {[0, 1, 2, 3].map((i) => (
+            {[0, 1, 2, 3, 4, 5].map((i) => (
               <details key={i} open>
                 <summary>{t(`faq.items.${i}.question`)}</summary>
                 <p>{t(`faq.items.${i}.answer`)}</p>
@@ -180,14 +151,18 @@ export default function Home() {
         <section className="apply" id="apply" aria-label="Apply">
           <div className="section-head">
             <h2>{t("applySection.title")}</h2>
-            <p>{t("applySection.subtitle")}</p>
+            <p dangerouslySetInnerHTML={{ __html: t.raw("applySection.subtitle") }} />
           </div>
           <div className="cta-panel">
-            <form className="cta-form" action="mailto:hello@designmonkey.ai" method="post" encType="text/plain">
-              <label className="sr-only" htmlFor="apply-email">{t("applySection.emailLabel")}</label>
-              <input id="apply-email" name="email" type="email" placeholder={t("applySection.emailPlaceholder")} required />
+            <form className="cta-form" action="#" method="post">
+              <label className="sr-only" htmlFor="apply-contact">{t("applySection.contactLabel")}</label>
+              <input id="apply-contact" name="contact_id" type="text" placeholder={t("applySection.contactPlaceholder")} required />
               <button className="btn primary" type="submit">{t("applySection.submitButton")}</button>
             </form>
+            <div className="cta-foot">
+              <p className="cta-small">{t("applySection.privacyNote")}</p>
+              <a className="cta-dm" href={t("applySection.dmUrl")} target="_blank" rel="noreferrer">{t("applySection.dmLink")}</a>
+            </div>
           </div>
         </section>
       </main>

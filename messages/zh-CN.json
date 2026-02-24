@@ -1,29 +1,27 @@
 {
   "metadata": {
-    "title": "Design Monkey — AI UI 的风格 DNA",
-    "description": "上传参考设计图，Design Monkey 自动提取风格 DNA 并通过 MCP 注入你的 IDE，让 AI 生成的 UI 风格统一，告别 AI 味。"
+    "title": "MonkeyUI — AI UI 的风格 DNA",
+    "description": "用一张参考图引导 AI，让你的 UI 看起来有设计感且风格统一，无需「像设计师一样思考」。"
   },
   "nav": {
     "evidence": "效果对比",
     "how": "工作原理",
     "faq": "常见问题",
-    "apply": "申请"
+    "apply": "联系我们"
   },
   "hero": {
-    "eyebrow": "种子用户计划 · 限 10 个名额",
-    "title": "将参考设计转化为可复用的",
-    "titleAccent": "风格 DNA",
-    "lead": "上传你的参考设计图，Design Monkey 自动提取风格 DNA 并通过 MCP 注入你的 IDE，让 AI 生成的 UI 风格统一，告别 AI 味，大幅减少提示词调整次数。",
-    "ctaPrimary": "申请成为种子用户",
+    "title": "告别「AI 味」UI，",
+    "titleMore": "打造",
+    "titleAccent": "产品级",
+    "titleEnd": "UI。",
+    "lead": "用一张参考图引导 AI，让你的 UI 看起来有设计感且风格统一，无需「像设计师一样思考」。",
+    "ctaPrimary": "联系获取权限",
     "ctaSecondary": "观看 15 秒演示",
-    "bestFitLabel": "最佳人选",
-    "bestFitDesc": "未来 7 天内有实际页面开发需求的开发者。",
-    "zeroDesignLabel": "零设计门槛",
-    "zeroDesignDesc": "选一张好的参考图，剩下的交给风格 DNA。"
+    "githubLink": "在 Github 查看"
   },
   "evidence": {
     "title": "效果对比",
-    "subtitle": "相同需求。左：无风格注入。右：使用 Design Monkey。",
+    "subtitle": "相同需求。左：无风格注入。右：使用 MonkeyUI。",
     "before": "使用前",
     "after": "使用后",
     "beforeAlt": "未注入风格的 UI",
@@ -38,61 +36,58 @@
   },
   "steps": {
     "title": "工作原理",
-    "subtitle": "三步实现从灵感到高质量 UI 的跨越。",
+    "step1Num": "1)",
     "step1Title": "选择参考图",
-    "step1Desc": "挑选一张风格统一、包含常见组件的 UI 截图。",
-    "step2Title": "提取风格 DNA",
-    "step2Desc": "我们自动解析颜色、排版、圆角、阴影、间距和组件风格。",
-    "step3Title": "在 IDE 中生成",
-    "step3Desc": "连接 MCP，让 AI 生成的 UI 默认匹配参考设计。"
-  },
-  "effort": {
-    "title": "你需要准备什么",
-    "subtitle": "明确期望，确保首次体验顺畅。",
-    "referenceTitle": "参考图质量很重要",
-    "referenceItems": [
-      "1 张视觉风格统一的清晰截图。",
-      "如果可能，包含按钮、表单和卡片等组件。",
-      "如果风格不够稳定，可能需要第二张参考图。"
-    ],
-    "timeTitle": "时间预算",
-    "timeItems": [
-      "10–20 分钟完成设置和首次生成。",
-      "在 7 天内用于实际页面开发。",
-      "分享反馈，帮助我们改进提取器。"
-    ]
+    "step1Desc": "选一个你觉得「好看」的 UI。",
+    "step2Num": "2)",
+    "step2Title": "我们学习它的风格",
+    "step2Desc": "自动提取关键设计决策。留下你的<strong>微信号</strong>，我会在 <strong>24–48 小时</strong>内联系你确认需求并开通权限。",
+    "step3Num": "3)",
+    "step3Title": "AI 遵循这个风格",
+    "step3Desc": "让你无需从零设计就能构建。"
   },
   "faq": {
     "title": "常见问题",
     "subtitle": "为准备开始构建的种子用户提供的简要解答。",
     "items": [
       {
-        "question": "我需要具备设计技能吗？",
-        "answer": "不需要。只要选一张好的参考图就够了。"
+        "question": "Q: MonkeyUI 是什么？",
+        "answer": "A: 它从你喜欢的 UI 参考中提取「风格 DNA」（颜色、字体比例、圆角、阴影、间距节奏、组件风格），让 AI 生成或编辑的 UI 看起来有设计感且风格统一，而不是千篇一律的「AI 默认风格」。"
       },
       {
-        "question": "什么样的参考图是好的？",
-        "answer": "一张视觉风格统一的清晰截图。包含按钮、表单和卡片会更有帮助。"
+        "question": "Q: 我需要什么样的参考图？一张截图够吗？",
+        "answer": "A: 一张截图就能开始。为了获得最佳效果，选择一张包含常见组件（按钮、表单、列表、卡片）的高质量截图。覆盖越全面，信号越强，一致性越好。"
       },
       {
-        "question": "支持哪些 IDE？",
-        "answer": "Cursor、GitHub Copilot 以及主流 IDE。"
+        "question": "Q: 支持哪些 IDE？",
+        "answer": "A: Cursor、GitHub Copilot 以及主流 IDE。"
       },
       {
-        "question": "我目前没有实际页面要开发，应该申请吗？",
-        "answer": "可能不太合适。我们优先选择能在 7 天内将其用于实际任务的申请者。"
+        "question": "Q: 能 100% 匹配参考图吗？",
+        "answer": "A: 目标不是像素级复制。目标是统一的、产品级的风格规则——字体比例、颜色用法、圆角/阴影强度和间距密度。"
+      },
+      {
+        "question": "Q: 支持哪些技术栈（React/Vue/Tailwind/原生）？",
+        "answer": "A: 风格 DNA 与框架无关。你可以将其映射到 Tailwind tokens、CSS 变量或你的组件库主题。"
+      },
+      {
+        "question": "Q: 为什么需要联系你才能获取权限？",
+        "answer": "A: 这是早期访问。我们先确认你的使用场景和期望，然后开通权限并收集反馈以快速迭代。"
       }
     ]
   },
   "applySection": {
-    "title": "申请成为种子用户",
-    "subtitle": "我们根据实际使用场景、参考图质量和反馈意愿进行筛选。",
-    "emailLabel": "电子邮件地址",
-    "emailPlaceholder": "请输入您的邮箱地址",
-    "submitButton": "申请"
+    "title": "获取早期访问",
+    "subtitle": "留下你的<strong>微信号</strong>，我会在 <strong>24–48 小时</strong>内联系你确认需求并开通权限。",
+    "contactLabel": "微信号或 X ID",
+    "contactPlaceholder": "你的微信号或 X ID（方便我联系你）",
+    "submitButton": "申请权限",
+    "privacyNote": "仅用于权限开通和反馈收集，不会用于营销。",
+    "dmLink": "更想私信？小红书：@小里产品手册 →",
+    "dmUrl": "https://xhslink.com/m/AW7330vVqNs"
   },
   "footer": {
-    "tagline": "Design Monkey · AI 生成 UI 的风格 DNA",
+    "tagline": "MonkeyUI · AI 生成 UI 的风格 DNA",
     "note": "种子用户计划 — 仅限 10 个团队。"
   },
   "languageSwitcher": {
