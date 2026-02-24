@@ -42,3 +42,5 @@ next-env.d.ts
 
 # local vscode settings
 .vscode
+
+.playwright-mcp
