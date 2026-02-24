@@ -1,14 +1,14 @@
-# Design Monkey — Style DNA for AI-generated UI
+# MonkeyUI — Style DNA for AI-generated UI
 
 > **Seed-user program · 10 spots** — [Apply now](https://designmonkey.ai)
 
-Design Monkey turns any reference UI screenshot into *style DNA* — a structured description of colors, typography, spacing, radii, and shadows — and injects it into your IDE via the **Model Context Protocol (MCP)**. The result: AI-generated UI that looks consistent and on-brand, with far fewer prompt iterations.
+MonkeyUI turns any reference UI screenshot into *style DNA* — a structured description of colors, typography, spacing, radii, and shadows — and injects it into your IDE via the **Model Context Protocol (MCP)**. The result: AI-generated UI that looks consistent and on-brand, with far fewer prompt iterations.
 
 ---
 
 ## What this repo is
 
-This is the **public marketing website** for Design Monkey (`designmonkey-www`). It is a single-page, bilingual landing page built with Next.js and deployed on Vercel.
+This is the **public marketing website** for MonkeyUI (`MonkeyUI-www`). It is a single-page, bilingual landing page built with Next.js and deployed on Vercel.
 
 **Live site:** [https://designmonkey.ai](https://designmonkey.ai)
 
@@ -20,7 +20,7 @@ This is the **public marketing website** for Design Monkey (`designmonkey-www`).
 - **React 19**
 - **[Tailwind CSS v4](https://tailwindcss.com/)** — utility classes + custom design tokens via CSS custom properties
 - **[next-intl v4](https://next-intl-docs.vercel.app/)** — i18n routing and translations (English + Simplified Chinese)
-- **Google Fonts** — Nunito, Quicksand, Caveat via `next/font`
+- **Google Fonts** — Inter via `next/font`
 - **ESLint 9** — Next.js core web vitals rules
 
 ---
@@ -50,13 +50,13 @@ npm run lint    # Run ESLint
 ## Project structure
 
 ```
-designmonkey-www/
+MonkeyUI-www/
 ├── messages/               # Translation files
 │   ├── en.json             # English
 │   └── zh-CN.json          # Simplified Chinese
 ├── public/                 # Static assets (images, video)
 └── src/
-    ├── middleware.js        # Locale routing middleware (next-intl)
+    ├── proxy.js            # Locale routing middleware (next-intl)
     ├── i18n/               # i18n configuration
     └── app/
         └── [locale]/
@@ -99,7 +99,7 @@ The site is deployed on [Vercel](https://vercel.com). Every push to `main` trigg
 
 To deploy your own fork:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/ZhenhangTung/designmonkey-www)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/MonkeyUI-dev/MonkeyUI)
 
 ---
 
