@@ -319,6 +319,7 @@ body::after {
   align-items: start;
   text-align: center;
   position: relative;
+  overflow: visible;
 }
 
 .hero-copy {
@@ -342,8 +343,7 @@ body::after {
 .accent {
   font-family: inherit;
   color: var(--color-secondary);
-  text-shadow: var(--shadow-glow);
-  display: inline-block; /* Prevent accent from breaking mid-word if possible, though it's usually short */
+  display: inline-block;
 }
 
 .lead {
@@ -866,6 +866,279 @@ video {
   0% { transform: translate3d(0, 0, 0); }
   50% { transform: translate3d(1.25rem, -1rem, 0); }
   100% { transform: translate3d(0, 0, 0); }
+}
+
+/* ══════════════════════════════════════════════════════
+   ANIMATIONS — WebGL BG · Reveal · Shimmer · Glow
+   ══════════════════════════════════════════════════════ */
+
+/* ── Hero WebGL Background (Aurora + Particles from react-bits) ── */
+.hero-bg {
+  position: absolute;
+  inset: -8rem;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+  mask-image: radial-gradient(ellipse 100% 100% at 50% 42%, black 10%, transparent 65%);
+  -webkit-mask-image: radial-gradient(ellipse 100% 100% at 50% 42%, black 10%, transparent 65%);
+}
+
+.hero-bg-layer {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-bg-aurora {
+  opacity: 0.55;
+}
+
+.hero-bg-particles {
+  opacity: 0.7;
+}
+
+.aurora-webgl {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.aurora-webgl canvas {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+.particles-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.particles-container canvas {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+/* ── Hero Entrance ── */
+.hero-copy {
+  animation: hero-entrance 1s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+}
+
+@keyframes hero-entrance {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+    filter: blur(0.8rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* Stagger hero children */
+.hero-copy h1 {
+  animation: hero-entrance 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both;
+}
+
+.hero-copy .lead {
+  animation: hero-entrance 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both;
+}
+
+.hero-copy .cta-row {
+  animation: hero-entrance 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both;
+}
+
+/* ── Shiny / Shimmer Accent Text (mouse-follow) ── */
+.accent.scroll-gradient {
+  position: relative;
+  color: var(--color-secondary);
+  -webkit-text-fill-color: var(--color-secondary);
+  transition: -webkit-text-fill-color 0.3s ease;
+}
+
+/* Gradient only visible while hovering */
+.accent.scroll-gradient[data-hovering] {
+  --shimmer-pos: 100%;
+  background: linear-gradient(
+    120deg,
+    var(--color-secondary) 0%,
+    var(--color-secondary) 30%,
+    #fff 50%,
+    var(--color-secondary) 70%,
+    var(--color-secondary) 100%
+  );
+  background-size: 200% 100%;
+  background-position: var(--shimmer-pos) 50%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: background-position 50ms linear;
+}
+
+/* ── Button Glow Pulse (Primary CTA) ── */
+.hero .btn.primary {
+  position: relative;
+  overflow: visible;
+}
+
+.hero .btn.primary::after {
+  content: '';
+  position: absolute;
+  inset: -0.15rem;
+  border-radius: inherit;
+  background: transparent;
+  box-shadow: 0 0 1.5rem color-mix(in srgb, var(--color-secondary) 35%, transparent);
+  opacity: 0;
+  animation: cta-glow 3s ease-in-out infinite;
+  animation-delay: 1.5s;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes cta-glow {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+/* ── FAQ Smooth Toggle ── */
+.faq-grid details {
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.faq-grid details[open] {
+  border-color: color-mix(in srgb, var(--color-secondary) 20%, transparent);
+}
+
+.faq-grid details p {
+  overflow: hidden;
+  animation: faq-expand 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes faq-expand {
+  0% {
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    opacity: 1;
+    max-height: 20rem;
+    transform: translateY(0);
+  }
+}
+
+.faq-grid summary {
+  transition: color 0.2s ease;
+}
+
+.faq-grid details[open] summary {
+  color: var(--color-secondary);
+}
+
+.faq-grid summary::before {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.faq-grid details[open] summary::before {
+  color: var(--color-secondary);
+}
+
+/* ── Card Hover Glow ── */
+.step-grid article {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s ease,
+              border-color 0.35s ease;
+}
+
+.step-grid article:hover {
+  transform: translateY(-0.35rem);
+  box-shadow:
+    0 1.25rem 4rem color-mix(in srgb, var(--color-shadow) 70%, transparent),
+    0 0 2rem color-mix(in srgb, var(--color-secondary) 12%, transparent);
+  border-color: color-mix(in srgb, var(--color-secondary) 18%, transparent);
+}
+
+/* ── Compare Card Hover ── */
+.compare figure {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s ease;
+}
+
+.compare figure:hover {
+  transform: scale(1.02);
+  box-shadow: 0 1.5rem 4rem color-mix(in srgb, var(--color-shadow) 70%, transparent);
+}
+
+/* ── Video Shell Glow ── */
+.video-shell {
+  transition: box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.video-shell:hover {
+  box-shadow:
+    0 1.25rem 4rem color-mix(in srgb, var(--color-shadow) 70%, transparent),
+    0 0 2.5rem color-mix(in srgb, var(--color-secondary) 10%, transparent);
+  border-color: color-mix(in srgb, var(--color-secondary) 14%, transparent);
+}
+
+/* ── Play Overlay Pulse ── */
+.play-overlay {
+  animation: play-pulse 3s ease-in-out infinite;
+}
+
+.play-overlay.is-hidden {
+  animation: none;
+}
+
+@keyframes play-pulse {
+  0%, 100% {
+    box-shadow: 0 0 2rem color-mix(in srgb, var(--color-secondary) 25%, transparent);
+  }
+  50% {
+    box-shadow: 0 0 3.5rem color-mix(in srgb, var(--color-secondary) 45%, transparent);
+  }
+}
+
+/* ── Nav Entrance ── */
+.nav-pill {
+  animation: nav-slide-down 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.05s both;
+}
+
+@keyframes nav-slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Apply Section Glow Border ── */
+.apply {
+  transition: box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.apply:hover {
+  border-color: color-mix(in srgb, var(--color-secondary) 22%, transparent);
+  box-shadow:
+    0 1.5rem 4rem color-mix(in srgb, var(--color-shadow) 75%, transparent),
+    0 0 3rem color-mix(in srgb, var(--color-secondary) 12%, transparent);
+}
+
+/* ── Footer Fade ── */
+.footer {
+  animation: hero-entrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
 }
 
 /* ── Footer ── */
