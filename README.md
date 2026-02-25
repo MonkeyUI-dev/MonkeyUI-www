@@ -1,8 +1,6 @@
 # MonkeyUI — Style DNA for AI-generated UI
 
-> **Seed-user program · 10 spots** — [Apply now](https://designmonkey.ai)
-
-MonkeyUI turns any reference UI screenshot into *style DNA* — a structured description of colors, typography, spacing, radii, and shadows — and injects it into your IDE via the **Model Context Protocol (MCP)**. The result: AI-generated UI that looks consistent and on-brand, with far fewer prompt iterations.
+MonkeyUI is a **UI/UX knowledge base** that empowers vibe coding by turning any reference UI screenshot into *style DNA* — a structured description of colors, typography, spacing, radii, and shadows — and injecting it into your IDE via the **Model Context Protocol (MCP)**. Through carefully designed reference guidelines, it helps developers generate professional-grade, high-intent UI without requiring designer expertise.
 
 ---
 
@@ -10,7 +8,7 @@ MonkeyUI turns any reference UI screenshot into *style DNA* — a structured des
 
 This is the **public marketing website** for MonkeyUI (`MonkeyUI-www`). It is a single-page, bilingual landing page built with Next.js and deployed on Vercel.
 
-**Live site:** [https://designmonkey.ai](https://designmonkey.ai)
+**Live site:** [https://monkeyui.com](https://monkeyui.com)
 
 ---
 
@@ -44,31 +42,6 @@ npm run build   # Production build
 npm start       # Start production server
 npm run lint    # Run ESLint
 ```
-
----
-
-## Project structure
-
-```
-MonkeyUI-www/
-├── messages/               # Translation files
-│   ├── en.json             # English
-│   └── zh-CN.json          # Simplified Chinese
-├── public/                 # Static assets (images, video)
-└── src/
-    ├── proxy.js            # Locale routing middleware (next-intl)
-    ├── i18n/               # i18n configuration
-    └── app/
-        └── [locale]/
-            ├── layout.js   # Root layout (fonts, metadata, i18n provider)
-            ├── page.js     # Landing page (all sections)
-            ├── globals.css # Design tokens + all styles
-            └── components/
-                ├── LanguageSwitcher.js
-                └── VideoPlayer.js
-```
-
-For a full breakdown of conventions and how the codebase is structured, see [Agent.md](./Agent.md).
 
 ---
 
