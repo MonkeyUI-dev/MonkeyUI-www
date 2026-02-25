@@ -3,6 +3,9 @@ import { useTranslations } from "next-intl";
 import VideoPlayer from "./components/VideoPlayer";
 import LanguageSwitcher from "./components/LanguageSwitcher";
 import MobileNav from "./components/MobileNav";
+import AuroraBackground from "./components/AuroraBackground";
+import ScrollReveal from "./components/ScrollReveal";
+import ShinyText from "./components/ShinyText";
 
 export default function Home() {
   const t = useTranslations();
@@ -34,6 +37,7 @@ export default function Home() {
       <main>
         {/* ── Hero ── */}
         <section className="hero" aria-label="Hero">
+          <AuroraBackground />
           <div className="doodles hero-doodles" aria-hidden="true">
             <span className="blob blob-hero-1"></span>
             <span className="blob blob-hero-2"></span>
@@ -41,7 +45,7 @@ export default function Home() {
           <div className="hero-copy">
             <h1>
               {t("hero.title")} <br className="hidden sm:block" />
-              {t("hero.titleMore")} <span className="accent">{t("hero.titleAccent")}</span> {t("hero.titleEnd")}
+              {t("hero.titleMore")} <ShinyText>{t("hero.titleAccent")}</ShinyText> {t("hero.titleEnd")}
             </h1>
             <p className="lead">{t("hero.lead")}</p>
             <div className="cta-row">
@@ -60,11 +64,11 @@ export default function Home() {
               <path d="M10 10 L40 50 L70 10 L100 50 L130 10" />
             </svg>
           </div>
-          <div className="section-head">
+          <ScrollReveal className="section-head">
             <h2>{t("evidence.title")}</h2>
             <p>{t("evidence.subtitle")}</p>
-          </div>
-          <div className="card">
+          </ScrollReveal>
+          <ScrollReveal className="card" delay={0.15}>
             <div className="compare">
               <figure>
                 <figcaption>{t("evidence.before")}</figcaption>
@@ -85,7 +89,7 @@ export default function Home() {
                 />
               </figure>
             </div>
-          </div>
+          </ScrollReveal>
         </section>
 
         {/* ── Demo ── */}
@@ -96,61 +100,63 @@ export default function Home() {
               <path d="M30 70 C30 35, 110 35, 110 70 C110 105, 30 105, 30 70 Z" />
             </svg>
           </div>
-          <div className="section-head">
+          <ScrollReveal className="section-head">
             <h2>{t("demo.title")}</h2>
             <p>{t("demo.subtitle")}</p>
-          </div>
-          <VideoPlayer />
+          </ScrollReveal>
+          <ScrollReveal variant="scale" delay={0.1}>
+            <VideoPlayer />
+          </ScrollReveal>
         </section>
 
         {/* ── How it works ── */}
         <section className="steps" id="how" aria-label="How it works">
-          <div className="section-head">
+          <ScrollReveal className="section-head">
             <h2>{t("steps.title")}</h2>
-          </div>
+          </ScrollReveal>
           <div className="step-grid">
-            <article>
+            <ScrollReveal tag="article" delay={0}>
               <div className="step-head">
                 <span className="step-num">{t("steps.step1Num")}</span>
                 <h3>{t("steps.step1Title")}</h3>
               </div>
               <p>{t("steps.step1Desc")}</p>
-            </article>
-            <article>
+            </ScrollReveal>
+            <ScrollReveal tag="article" delay={0.12}>
               <div className="step-head">
                 <span className="step-num">{t("steps.step2Num")}</span>
                 <h3>{t("steps.step2Title")}</h3>
               </div>
               <p dangerouslySetInnerHTML={{ __html: t.raw("steps.step2Desc") }} />
-            </article>
-            <article>
+            </ScrollReveal>
+            <ScrollReveal tag="article" delay={0.24}>
               <div className="step-head">
                 <span className="step-num">{t("steps.step3Num")}</span>
                 <h3>{t("steps.step3Title")}</h3>
               </div>
               <p>{t("steps.step3Desc")}</p>
-            </article>
+            </ScrollReveal>
           </div>
         </section>
 
         {/* ── FAQ ── */}
         <section className="faq" id="faq" aria-label="FAQ">
-          <div className="section-head">
+          <ScrollReveal className="section-head">
             <h2>{t("faq.title")}</h2>
             <p>{t("faq.subtitle")}</p>
-          </div>
+          </ScrollReveal>
           <div className="faq-grid">
             {[0, 1, 2, 3, 4, 5].map((i) => (
-              <details key={i} open>
+              <ScrollReveal tag="details" key={i} delay={i * 0.08} open>
                 <summary>{t(`faq.items.${i}.question`)}</summary>
                 <p>{t(`faq.items.${i}.answer`)}</p>
-              </details>
+              </ScrollReveal>
             ))}
           </div>
         </section>
 
         {/* ── Apply ── */}
-        <section className="apply" id="apply" aria-label="Apply">
+        <ScrollReveal tag="section" className="apply" id="apply" aria-label="Apply">
           <div className="section-head">
             <h2>{t("applySection.title")}</h2>
             <p dangerouslySetInnerHTML={{ __html: t.raw("applySection.subtitle") }} />
@@ -166,7 +172,7 @@ export default function Home() {
               <a className="cta-dm" href={t("applySection.dmUrl")} target="_blank" rel="noreferrer">{t("applySection.dmLink")}</a>
             </div>
           </div>
-        </section>
+        </ScrollReveal>
       </main>
 
       <footer className="footer">
