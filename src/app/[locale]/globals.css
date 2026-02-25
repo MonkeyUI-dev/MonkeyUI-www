@@ -167,7 +167,8 @@ body::after {
 */
 
 .nav-pill {
-  display: flex; /* Changed from grid to flex for better control */
+  position: relative;
+  display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--space-2);
@@ -270,11 +271,7 @@ body::after {
   z-index: 20;
 }
 
-/* In mobile menu footer, open dropdown upward so it doesn't clip below the viewport */
-.mobile-menu-footer .lang-dropdown {
-  top: auto;
-  bottom: calc(100% + 0.35rem);
-}
+
 
 .lang-option {
   width: 100%;
@@ -386,6 +383,9 @@ body::after {
   --btn-bg: var(--color-surface-glass);
   --btn-text: var(--color-primary);
   --btn-hover: color-mix(in srgb, var(--color-primary) 8%, var(--color-surface-glass));
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: 0.06rem solid var(--color-border);
   background: var(--btn-bg);
   color: var(--btn-text);
@@ -394,6 +394,7 @@ body::after {
   cursor: pointer;
   font-weight: 600;
   text-decoration: none;
+  white-space: nowrap;
   font-family: var(--font-family-display);
   transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, border 0.25s ease;
   box-shadow: 0 0.75rem 2rem color-mix(in srgb, var(--color-shadow) 55%, transparent);
@@ -954,43 +955,26 @@ video {
   pointer-events: auto;
 }
 
-/* ── Mobile menu panel ── */
+/* ── Mobile menu panel (dropdown, salient-js style) ── */
 .mobile-menu {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: min(22rem, 85vw);
-  height: 100dvh;
-  z-index: 100;
-  background: color-mix(in srgb, var(--color-surface) 96%, transparent);
-  border-left: 0.06rem solid var(--color-border);
-  backdrop-filter: blur(1.5rem);
-  box-shadow: -1rem 0 3rem rgba(0, 0, 0, 0.4);
-  padding: var(--space-6) var(--space-4) var(--space-4);
-  flex-direction: column;
-  gap: var(--space-4);
-  transform: translateX(100%);
-  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.mobile-menu.is-open {
-  transform: translateX(0);
+  display: none; /* shown via media query on mobile */
 }
 
 .mobile-menu-links {
   display: flex;
   flex-direction: column;
-  gap: var(--space-1);
 }
 
 .mobile-menu-links a {
-  color: var(--color-ink-muted);
+  display: block;
+  width: 100%;
+  color: var(--color-ink);
   text-decoration: none;
   font-size: 1.1rem;
   font-family: var(--font-family-display);
   font-weight: 500;
-  padding: var(--space-2) var(--space-2);
+  letter-spacing: -0.01em;
+  padding: 0.5rem;
   border-radius: var(--radius-sm);
   transition: background 0.2s ease, color 0.2s ease;
 }
@@ -1000,24 +984,29 @@ video {
   color: var(--color-primary);
 }
 
-.mobile-menu-actions {
-  padding-top: var(--space-2);
+.mobile-menu-divider {
+  border: none;
   border-top: 0.06rem solid var(--color-border-soft);
+  margin: 0.5rem 0;
 }
 
-.mobile-apply-btn {
+.mobile-menu-signin {
   display: block;
-  text-align: center;
   width: 100%;
+  color: var(--color-ink);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-family: var(--font-family-display);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  padding: 0.5rem;
+  border-radius: var(--radius-sm);
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
-.mobile-menu-footer {
-  margin-top: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: var(--space-2);
-  border-top: 0.06rem solid var(--color-border-soft);
+.mobile-menu-signin:hover {
+  background: color-mix(in srgb, var(--color-primary) 6%, transparent);
+  color: var(--color-primary);
 }
 
 /* ── Responsive ── */
@@ -1035,9 +1024,16 @@ video {
 
 /* Mobile: ≤ 48rem (768px) */
 @media (max-width: 48rem) {
+  /* Prevent doodle / blob overflow from causing horizontal scroll */
+  .page {
+    overflow-x: clip;
+  }
+
   /* Show hamburger, hide desktop nav items */
   .mobile-hamburger {
     display: flex;
+    width: 2.75rem;
+    height: 2.75rem;
   }
 
   .mobile-backdrop {
@@ -1046,27 +1042,47 @@ video {
 
   .mobile-menu {
     display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: calc(100% + 1rem);
+    inset-inline: 0;
+    z-index: 10;
+    background: color-mix(in srgb, var(--color-surface) 96%, transparent);
+    border: 0.06rem solid var(--color-border);
+    border-radius: var(--radius-xl);
+    backdrop-filter: blur(1.5rem);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.4);
+    padding: 1rem;
+    transform-origin: top;
+    transform: scale(0.95);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.15s ease-out, opacity 0.15s ease-out;
+  }
+
+  .mobile-menu.is-open {
+    transform: scale(1);
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .nav-links {
     display: none;
   }
 
+  /* Only hide the apply button; keep GitHub + language switcher visible */
   .nav-apply {
     display: none;
   }
 
-  .nav-actions .nav-github {
-    display: none;
+  /* Push actions right to cluster next to hamburger */
+  .nav-actions {
+    margin-left: auto;
   }
 
-  .nav-actions .lang-switcher {
-    display: none;
-  }
-
-  /* Simplify nav-pill for mobile */
+  /* Simplify nav-pill for mobile: logo ← → hamburger */
   .nav-pill {
-    padding: calc(var(--space-1) * 0.75) var(--space-2);
+    padding: calc(var(--space-1) * 0.75) calc(var(--space-1) * 0.75) calc(var(--space-1) * 0.75) var(--space-2);
     gap: var(--space-1);
   }
 
@@ -1085,14 +1101,15 @@ video {
   }
 
   .cta-row {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--space-2);
   }
 
   .cta-row .btn {
-    width: 100%;
-    text-align: center;
-    max-width: 20rem;
+    width: auto;
+    padding: var(--space-2) var(--space-3);
+    font-size: 0.9rem;
   }
 
   /* Evidence / Compare */
@@ -1142,15 +1159,19 @@ video {
 
   .cta-form {
     flex-direction: column;
+    align-items: stretch;
   }
 
   .cta-form input {
+    flex: 0 0 auto;
     min-width: 0;
     width: 100%;
   }
 
   .cta-form .btn {
     width: 100%;
+    display: flex;
+    padding: var(--space-2) var(--space-3);
   }
 
   /* Video */
@@ -1192,6 +1213,23 @@ video {
 
   .section-head h2 {
     font-size: 1.3rem;
+  }
+
+  .cta-form input {
+    padding: var(--space-2);
+    font-size: 0.9rem;
+  }
+
+  .cta-form .btn {
+    font-size: 0.9rem;
+  }
+
+  .faq-grid details {
+    padding: var(--space-2);
+  }
+
+  .step-grid article {
+    padding: var(--space-2);
   }
 }
 
