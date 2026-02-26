@@ -49,9 +49,10 @@ export default function Home() {
             </h1>
             <p className="lead">{t("hero.lead")}</p>
             <div className="cta-row">
-              <a className="btn primary" href="#apply">{t("hero.ctaPrimary")}</a>
+              <a className="btn primary" href={t("hero.ctaPrimaryUrl")} target="_blank" rel="noreferrer">{t("hero.ctaPrimary")}</a>
               <a className="btn subtle" href="#demo">{t("hero.ctaSecondary")}</a>
             </div>
+            <a className="hero-link" href="#apply">{t("hero.heroLink")}</a>
           </div>
         </section>
 
@@ -73,7 +74,7 @@ export default function Home() {
               <figure>
                 <figcaption>{t("evidence.before")}</figcaption>
                 <Image
-                  src="/before.jpeg"
+                  src="/before.png"
                   alt={t("evidence.beforeAlt")}
                   fill
                   sizes="(max-width: 640px) 100vw, 50vw"
@@ -82,7 +83,7 @@ export default function Home() {
               <figure>
                 <figcaption>{t("evidence.after")}</figcaption>
                 <Image
-                  src="/after.jpeg"
+                  src="/after.png"
                   alt={t("evidence.afterAlt")}
                   fill
                   sizes="(max-width: 640px) 100vw, 50vw"
@@ -160,6 +161,11 @@ export default function Home() {
           <div className="section-head">
             <h2>{t("applySection.title")}</h2>
             <p dangerouslySetInnerHTML={{ __html: t.raw("applySection.subtitle") }} />
+            <ul className="apply-list">
+              {t.raw("applySection.applyList").map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
+            </ul>
           </div>
           <div className="cta-panel">
             <form className="cta-form" action="#" method="post">

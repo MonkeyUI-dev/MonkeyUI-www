@@ -26,7 +26,7 @@ export default function VideoPlayer() {
         ref={videoRef}
         controls
         preload="metadata"
-        poster="/after.jpeg"
+        poster="/video-cover.jpg"
         onPlay={() => setPlaying(true)}
         onPause={() => setPlaying(false)}
         onEnded={() => setPlaying(false)}

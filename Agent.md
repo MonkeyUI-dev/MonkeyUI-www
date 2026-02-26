@@ -39,7 +39,7 @@ MonkeyUI-www/
 ├── public/                 # Static assets served at /
 │   ├── before.jpeg         # Evidence section: "before" screenshot
 │   ├── after.jpeg          # Evidence section: "after" screenshot (also video poster)
-│   └── demo-video.mp4      # Demo section: 15-second workflow video
+│   └── demo-video.mp4      # Demo section: 50-second workflow video
 ├── src/
 │   ├── proxy.js             # next-intl locale routing middleware
 │   ├── i18n/
