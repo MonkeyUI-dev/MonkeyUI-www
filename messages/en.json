@@ -15,20 +15,22 @@
     "titleAccent": "product-quality",
     "titleEnd": "UI.",
     "lead": "Guide AI with a reference so your UI looks intentional and consistent, without having to \"think like a designer.\"",
-    "ctaPrimary": "Contact for access",
-    "ctaSecondary": "Watch 15s demo",
-    "githubLink": "View on Github"
+    "ctaPrimary": "Try the open-source demo",
+    "ctaPrimaryUrl": "https://demo.monkeyui.com/",
+    "ctaSecondary": "Watch 50s demo",
+    "githubLink": "View on Github",
+    "heroLink": "Need tuning help? →"
   },
   "evidence": {
     "title": "Before / After",
     "subtitle": "Same requirement. Left: no style injection. Right: with MonkeyUI.",
-    "before": "Before",
-    "after": "After",
+    "before": "Before (Gemini)",
+    "after": "After (with MonkeyUI)",
     "beforeAlt": "UI without style injection",
     "afterAlt": "UI with style DNA applied"
   },
   "demo": {
-    "title": "15-second workflow demo",
+    "title": "50-second workflow demo",
     "subtitle": "Reference → extraction → IDE generation, in one smooth pass.",
     "playLabel": "Play demo video",
     "playText": "Play",
@@ -41,7 +43,7 @@
     "step1Desc": "Choose a UI you consider \"good.\"",
     "step2Num": "2)",
     "step2Title": "We learn the look",
-    "step2Desc": "Automatically extract the key style decisions. Leave your <strong>WeChat ID</strong>. I'll reach out in <strong>24–48 hours</strong> to confirm fit and grant access.",
+    "step2Desc": "Automatically extract the key style decisions.<br />Leave your <strong>WeChat ID</strong>. I'll reply in <strong>24–48 hours</strong> with 1–2 actionable tuning suggestions and clear roadmap feedback.",
     "step3Num": "3)",
     "step3Title": "AI follows the style",
     "step3Desc": "So you can build without designing from scratch."
@@ -77,12 +79,13 @@
     ]
   },
   "applySection": {
-    "title": "Get early access",
-    "subtitle": "Leave your <strong>WeChat ID</strong>. I'll reach out in <strong>24–48 hours</strong> to confirm fit and grant access.",
+    "title": "Get UI Style Tuning (WeChat preferred)",
+    "subtitle": "It's open-source and ready to use. Share your reference + what you're building. I'll reply in <strong>24–48 hours</strong> with:",
+    "applyList": ["1–2 concrete changes to improve stability and consistency", "clear roadmap feedback on your request"],
     "contactLabel": "WeChat or X ID",
-    "contactPlaceholder": "Your WeChat ID or X ID (so I can contact you)",
-    "submitButton": "Request access",
-    "privacyNote": "Used only for access and feedback. No marketing.",
+    "contactPlaceholder": "Your WeChat ID or X ID (for feedback + follow-up, no marketing)",
+    "submitButton": "Get UI Style Tuning",
+    "privacyNote": "Used only for product feedback. Ask anytime to delete your contact info.",
     "dmLink": "Prefer to DM? 小红书：@小里产品手册 →",
     "dmUrl": "https://xhslink.com/m/AW7330vVqNs"
   },

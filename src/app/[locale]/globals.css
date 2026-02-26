@@ -537,8 +537,10 @@ section {
   z-index: 1;
 }
 
-video {
+.video-shell video {
   width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
   border-radius: var(--radius-lg);
   display: block;
   background: var(--color-background);

@@ -15,20 +15,22 @@
     "titleAccent": "产品级",
     "titleEnd": "UI。",
     "lead": "用一张参考图引导 AI，让你的 UI 看起来有设计感且风格统一，无需「像设计师一样思考」。",
-    "ctaPrimary": "联系获取权限",
-    "ctaSecondary": "观看 15 秒演示",
-    "githubLink": "在 Github 查看"
+    "ctaPrimary": "试用开源 Demo",
+    "ctaPrimaryUrl": "https://demo.monkeyui.com/",
+    "ctaSecondary": "观看 50 秒演示",
+    "githubLink": "在 Github 查看",
+    "heroLink": "需要调优帮助？→"
   },
   "evidence": {
     "title": "效果对比",
     "subtitle": "相同需求。左：无风格注入。右：使用 MonkeyUI。",
-    "before": "使用前",
-    "after": "使用后",
+    "before": "使用前 (Gemini)",
+    "after": "使用后 (MonkeyUI)",
     "beforeAlt": "未注入风格的 UI",
     "afterAlt": "应用风格 DNA 后的 UI"
   },
   "demo": {
-    "title": "15 秒工作流演示",
+    "title": "50 秒工作流演示",
     "subtitle": "从参考图 → 风格提取 → IDE 生成，一气呵成。",
     "playLabel": "播放演示视频",
     "playText": "播放",
@@ -41,7 +43,7 @@
     "step1Desc": "选一个你觉得「好看」的 UI。",
     "step2Num": "2)",
     "step2Title": "我们学习它的风格",
-    "step2Desc": "自动提取关键设计决策。留下你的<strong>微信号</strong>，我会在 <strong>24–48 小时</strong>内联系你确认需求并开通权限。",
+    "step2Desc": "自动提取关键设计决策。<br />留下你的<strong>微信号</strong>，我会在 <strong>24–48 小时</strong>内回复你 1–2 个可操作的调优建议和清晰的路线图反馈。",
     "step3Num": "3)",
     "step3Title": "AI 遵循这个风格",
     "step3Desc": "让你无需从零设计就能构建。"
@@ -77,12 +79,13 @@
     ]
   },
   "applySection": {
-    "title": "获取早期访问",
-    "subtitle": "留下你的<strong>微信号</strong>，我会在 <strong>24–48 小时</strong>内联系你确认需求并开通权限。",
+    "title": "获取 UI 风格调优（微信优先）",
+    "subtitle": "已开源，可直接使用。分享你的参考图 + 你正在构建的产品。我会在 <strong>24–48 小时</strong>内回复：",
+    "applyList": ["1–2 个具体的改进建议，提升稳定性和一致性", "清晰的路线图反馈"],
     "contactLabel": "微信号或 X ID",
-    "contactPlaceholder": "你的微信号或 X ID（方便我联系你）",
-    "submitButton": "申请权限",
-    "privacyNote": "仅用于权限开通和反馈收集，不会用于营销。",
+    "contactPlaceholder": "你的微信号或 X ID（用于反馈和跟进，不会用于营销）",
+    "submitButton": "获取 UI 风格调优",
+    "privacyNote": "仅用于产品反馈。可随时要求删除你的联系信息。",
     "dmLink": "更想私信？小红书：@小里产品手册 →",
     "dmUrl": "https://xhslink.com/m/AW7330vVqNs"
   },
