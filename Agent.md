@@ -126,90 +126,13 @@ npm run lint
 
 ## Non-technical collaborator guide
 
-This section is for contributors who are **not** software engineers. It explains how to set up the project and contribute changes using everyday language, with helper scripts that do the technical work for you. An AI coding assistant (like GitHub Copilot or ChatGPT) can also walk you through any of these steps if you describe what you want in plain English.
+For contributors without a software engineering background, see **[CONTRIBUTING_NON_TECH.md](./CONTRIBUTING_NON_TECH.md)**. It covers:
 
----
-
-### Prerequisites — what you need before you start
-
-1. **A computer running macOS, Windows, or Linux.**
-2. **Node.js (version 18 or newer)** — the engine that runs the website locally.
-   - Download from [https://nodejs.org](https://nodejs.org) (choose the "LTS" version).
-   - After installing, open a terminal (on macOS: *Terminal*; on Windows: *Command Prompt* or *PowerShell*) and type `node --version` to confirm it's installed.
-3. **Git** — the tool that tracks changes and lets you collaborate.
-   - Download from [https://git-scm.com](https://git-scm.com).
-   - After installing, type `git --version` in your terminal to confirm it's installed.
-4. **A GitHub account** — create one for free at [https://github.com](https://github.com).
-
----
-
-### Setting up the project for the first time
-
-1. **Clone (download) the repository.**
-   In your terminal, run:
-   ```bash
-   git clone https://github.com/MonkeyUI-dev/MonkeyUI-www.git
-   cd MonkeyUI-www
-   ```
-2. **Run the setup script.** This installs all dependencies and starts the local preview site in one step:
-   ```bash
-   bash scripts/setup.sh
-   ```
-3. Open [http://localhost:3000](http://localhost:3000) in your browser. You should see the MonkeyUI landing page.
-4. Press **Ctrl + C** in the terminal when you want to stop the local server.
-
-**Just tell your AI assistant:** *"Help me set up the MonkeyUI project on my computer"* and it will guide you through these steps.
-
----
-
-### Making and sharing a change
-
-Use the interactive git workflow helper to avoid typing git commands manually:
-
-```bash
-bash scripts/contribute.sh
-```
-
-The script will show you a plain-English menu:
-
-| What you say / want to do | Menu option |
-|---|---|
-| "I want to start working on something new" | **1** — creates a new branch |
-| "I finished a change and want to save it" | **2** — stages and commits your files |
-| "I want to upload my changes so others can see them" | **3** — pushes your branch to GitHub |
-| "I want to get the latest changes from the team" | **4** — downloads recent updates |
-| "Show me what I've changed so far" | **5** — shows a summary of changes |
-
-Each step shows you the exact git command it will run and asks for confirmation before doing anything.
-
-**After uploading your changes (option 3),** open a Pull Request on GitHub:
-- Go to [https://github.com/MonkeyUI-dev/MonkeyUI-www/pulls](https://github.com/MonkeyUI-dev/MonkeyUI-www/pulls)
-- Click **"New pull request"** and follow the prompts.
-
-**Just tell your AI assistant:** *"Help me commit and push my changes to MonkeyUI-www"* and it will run the right commands for you.
-
----
-
-### What kinds of contributions are welcome from non-technical collaborators?
-
-- **Copy editing** — fixing typos or improving the wording of any text on the site. All user-visible text lives in `messages/en.json` (English) and `messages/zh-CN.json` (Simplified Chinese). Open either file, find the text you want to change, edit it, and save.
-- **Translation fixes** — if a Chinese translation is incorrect, edit `messages/zh-CN.json`.
-- **Reporting visual issues** — open a GitHub Issue at [https://github.com/MonkeyUI-dev/MonkeyUI-www/issues](https://github.com/MonkeyUI-dev/MonkeyUI-www/issues) and describe what looks wrong (screenshots are very helpful).
-- **Suggesting new content** — open a GitHub Issue describing the content you'd like to add or change.
-
----
-
-### Getting help from an AI assistant
-
-You can describe any task in plain English to an AI coding assistant (GitHub Copilot, ChatGPT, etc.) and it will translate your request into the correct steps. Some example prompts:
-
-| What you want | What to type to your AI assistant |
-|---|---|
-| Fix a typo | "In the MonkeyUI website, fix the typo '…' in the English translation file" |
-| Start a new branch | "Create a git branch called 'fix-hero-typo' in MonkeyUI-www" |
-| Save your work | "Commit all my changes in MonkeyUI-www with the message 'Fix typo in hero section'" |
-| Upload your changes | "Push my current branch to GitHub for MonkeyUI-www" |
-| Get the latest code | "Pull the latest changes from main in MonkeyUI-www" |
+- Prerequisites (Node.js, Git, GitHub account) with plain-English install instructions
+- First-time project setup via `bash scripts/setup.sh`
+- An interactive git workflow helper (`bash scripts/contribute.sh`) with a plain-English menu
+- Contribution types suited to non-technical collaborators (copy edits, translations, issue reports)
+- AI assistant prompt examples for common tasks
 
 ---
 
