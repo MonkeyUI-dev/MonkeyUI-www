@@ -46,8 +46,9 @@ export default function SocialIcons({ xUrl, xiaohongshuUrl }) {
             <Image
               src="/Wechat_contact.jpg"
               alt="WeChat QR Code"
-              width={200}
-              height={200}
+              width={160}
+              height={216}
+              style={{ width: "10rem", height: "auto", maxWidth: "none" }}
             />
           </div>
         )}
