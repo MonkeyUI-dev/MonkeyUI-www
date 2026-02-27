@@ -17,7 +17,7 @@
     "lead": "Guide AI with a reference so your UI looks intentional and consistent, without having to \"think like a designer.\"",
     "ctaPrimary": "Try the open-source demo",
     "ctaPrimaryUrl": "https://demo.monkeyui.com/",
-    "ctaSecondary": "Watch 50s demo",
+    "ctaSecondary": "Watch 1-minute demo",
     "githubLink": "View on Github",
     "heroLink": "Need tuning help? →"
   },
@@ -30,7 +30,7 @@
     "afterAlt": "UI with style DNA applied"
   },
   "demo": {
-    "title": "50-second workflow demo",
+    "title": "1-minute workflow demo",
     "subtitle": "Reference → extraction → IDE generation, in one smooth pass.",
     "playLabel": "Play demo video",
     "playText": "Play",
