@@ -79,12 +79,13 @@
     ]
   },
   "applySection": {
-    "title": "获取 UI 风格调优（微信优先）",
+    "title": "获取 UI 风格调优",
     "subtitle": "已开源，可直接使用。分享你的参考图 + 你正在构建的产品。我会在 <strong>24–48 小时</strong>内回复：",
     "applyList": ["1–2 个具体的改进建议，提升稳定性和一致性", "清晰的路线图反馈"],
     "contactLabel": "微信号或 X ID",
     "contactPlaceholder": "你的微信号或 X ID（用于反馈和跟进，不会用于营销）",
     "submitButton": "获取 UI 风格调优",
+    "formUrl": "https://tally.so/r/A7lJ8o",
     "privacyNote": "仅用于产品反馈。可随时要求删除你的联系信息。",
     "xUrl": "https://x.com/Thea_Xya",
     "xiaohongshuUrl": "https://xhslink.com/m/AW7330vVqNs"

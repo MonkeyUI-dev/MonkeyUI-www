@@ -79,12 +79,13 @@
     ]
   },
   "applySection": {
-    "title": "Get UI Style Tuning (WeChat preferred)",
+    "title": "Get UI Style Tuning",
     "subtitle": "It's open-source and ready to use. Share your reference + what you're building. I'll reply in <strong>24–48 hours</strong> with:",
     "applyList": ["1–2 concrete changes to improve stability and consistency", "clear roadmap feedback on your request"],
     "contactLabel": "WeChat or X ID",
     "contactPlaceholder": "Your WeChat ID or X ID (for feedback + follow-up, no marketing)",
     "submitButton": "Get UI Style Tuning",
+    "formUrl": "https://tally.so/r/A7lJ8o",
     "privacyNote": "Used only for product feedback. Ask anytime to delete your contact info.",
     "xUrl": "https://x.com/Thea_Xya",
     "xiaohongshuUrl": "https://xhslink.com/m/AW7330vVqNs"
