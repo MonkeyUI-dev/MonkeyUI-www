@@ -16,7 +16,17 @@ export default function Home() {
       {/* ── Navigation ── */}
       <header className="nav">
         <div className="nav-pill">
-          <div className="logo nav-logo">MonkeyUI</div>
+          <div className="nav-logo" aria-label="MonkeyUI">
+            <Image
+              src="/monkeyui_logo.svg"
+              alt="MonkeyUI logo"
+              width={28}
+              height={28}
+              priority
+              unoptimized
+            />
+            <span className="logo">MonkeyUI</span>
+          </div>
           <nav className="nav-links" aria-label="Primary">
             <a href="#evidence">{t("nav.evidence")}</a>
             <a href="#how">{t("nav.how")}</a>
