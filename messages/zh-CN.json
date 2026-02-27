@@ -17,7 +17,7 @@
     "lead": "用一张参考图引导 AI，让你的 UI 看起来有设计感且风格统一，无需「像设计师一样思考」。",
     "ctaPrimary": "试用开源 Demo",
     "ctaPrimaryUrl": "https://demo.monkeyui.com/",
-    "ctaSecondary": "观看 50 秒演示",
+    "ctaSecondary": "观看 1 分钟演示",
     "githubLink": "在 Github 查看",
     "heroLink": "需要调优帮助？→"
   },
@@ -30,7 +30,7 @@
     "afterAlt": "应用风格 DNA 后的 UI"
   },
   "demo": {
-    "title": "50 秒工作流演示",
+    "title": "1 分钟工作流演示",
     "subtitle": "从参考图 → 风格提取 → IDE 生成，一气呵成。",
     "playLabel": "播放演示视频",
     "playText": "播放",
