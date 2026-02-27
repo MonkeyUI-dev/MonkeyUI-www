@@ -783,16 +783,12 @@ section {
 }
 
 .wechat-qr-popup {
-  position: absolute;
-  bottom: calc(100% + 0.75rem);
-  left: 50%;
-  transform: translateX(-50%);
+  width: fit-content;
   background: var(--color-surface);
   border: 0.06rem solid var(--color-border);
   border-radius: var(--radius-md);
   box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.15);
   padding: var(--space-2);
-  z-index: 100;
 }
 
 .cta-panel p {
