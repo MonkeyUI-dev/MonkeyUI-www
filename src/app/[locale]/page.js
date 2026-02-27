@@ -169,11 +169,9 @@ export default function Home() {
             </ul>
           </div>
           <div className="cta-panel">
-            <form className="cta-form" action="#" method="post">
-              <label className="sr-only" htmlFor="apply-contact">{t("applySection.contactLabel")}</label>
-              <input id="apply-contact" name="contact_id" type="text" placeholder={t("applySection.contactPlaceholder")} required />
-              <button className="btn primary" type="submit">{t("applySection.submitButton")}</button>
-            </form>
+            <div className="cta-form">
+              <a className="btn primary" href={t("applySection.formUrl")} target="_blank" rel="noreferrer">{t("applySection.submitButton")}</a>
+            </div>
             <div className="cta-foot">
               <p className="cta-small">{t("applySection.privacyNote")}</p>
               <SocialIcons xUrl={t("applySection.xUrl")} xiaohongshuUrl={t("applySection.xiaohongshuUrl")} />
