@@ -6,6 +6,7 @@ import MobileNav from "./components/MobileNav";
 import AuroraBackground from "./components/AuroraBackground";
 import ScrollReveal from "./components/ScrollReveal";
 import ShinyText from "./components/ShinyText";
+import SocialIcons from "./components/SocialIcons";
 
 export default function Home() {
   const t = useTranslations();
@@ -175,7 +176,7 @@ export default function Home() {
             </form>
             <div className="cta-foot">
               <p className="cta-small">{t("applySection.privacyNote")}</p>
-              <a className="cta-dm" href={t("applySection.dmUrl")} target="_blank" rel="noreferrer">{t("applySection.dmLink")}</a>
+              <SocialIcons xUrl={t("applySection.xUrl")} xiaohongshuUrl={t("applySection.xiaohongshuUrl")} />
             </div>
           </div>
         </ScrollReveal>
