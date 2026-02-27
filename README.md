@@ -76,6 +76,12 @@ To deploy your own fork:
 
 ---
 
+## Credits
+
+Special thanks to [React Bits](https://reactbits.dev/) for inspiration and contribution to the UI community.
+
+---
+
 ## License
 
 MIT — see [LICENSE](./LICENSE) for details.
