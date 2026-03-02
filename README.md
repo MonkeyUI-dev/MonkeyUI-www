@@ -64,6 +64,8 @@ Contributions are welcome! Please:
 
 If you're making substantial changes, please open an issue first to discuss the approach.
 
+**New to GitHub or not from a technical background?** See the [Non-Technical Collaborator Guide](./CONTRIBUTING_NON_TECH.md) for step-by-step setup instructions, an interactive git workflow helper, and AI-assistant prompt examples.
+
 ---
 
 ## Deployment
