@@ -1,0 +1,11 @@
+Project: MonkeyUI
+Website: https://monkeyui.com
+Repository: https://github.com/MonkeyUI-dev/MonkeyUI-www
+Description: MonkeyUI is a UI/UX knowledge base that helps developers generate high-intent interfaces using style DNA and MCP workflows.
+
+Primary pages:
+- https://monkeyui.com/en
+- https://monkeyui.com/zh-CN
+
+Full context:
+- https://monkeyui.com/llms-full.txt

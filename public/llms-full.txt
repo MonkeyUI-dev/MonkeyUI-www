@@ -1,0 +1,23 @@
+MonkeyUI
+========
+
+MonkeyUI is a UI/UX knowledge base that helps developers turn reference UI screenshots into structured style DNA (colors, typography, spacing, radii, and shadows) and use that context in AI coding workflows via MCP.
+
+This repository hosts the public marketing website for MonkeyUI.
+
+Official links
+--------------
+- Website: https://monkeyui.com
+- GitHub (website): https://github.com/MonkeyUI-dev/MonkeyUI-www
+- GitHub (product): https://github.com/MonkeyUI-dev/MonkeyUI
+
+Supported locales
+-----------------
+- English: https://monkeyui.com/en
+- Simplified Chinese: https://monkeyui.com/zh-CN
+
+Key product messaging
+---------------------
+- MonkeyUI helps developers produce designer-grade interfaces during AI-assisted coding.
+- It provides reusable design context ("style DNA") to improve consistency and quality.
+- The website content is focused on evidence, workflow, demo, FAQ, and application onboarding.
