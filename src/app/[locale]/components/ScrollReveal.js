@@ -35,6 +35,13 @@ const variants = {
   },
 };
 
+const motionTags = {
+  div: motion.div,
+  section: motion.section,
+  article: motion.article,
+  details: motion.details,
+};
+
 export default function ScrollReveal({
   tag = "div",
   className = "",
@@ -44,7 +51,7 @@ export default function ScrollReveal({
   children,
   ...rest
 }) {
-  const MotionTag = motion.create(tag);
+  const MotionTag = motionTags[tag] || motion.div;
 
   return (
     <MotionTag

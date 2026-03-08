@@ -8,12 +8,6 @@ import LanguageSwitcher from "./LanguageSwitcher";
 export default function MobileNav() {
   const t = useTranslations();
   const [isOpen, setIsOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
-
-  // Ensure portal only renders after mount (SSR safety)
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   // Close menu on escape key
   useEffect(() => {
@@ -29,7 +23,7 @@ export default function MobileNav() {
   };
 
   // Only the backdrop is portaled to body (to escape nav-pill's backdrop-filter containing block)
-  const backdrop = mounted
+  const backdrop = isOpen && typeof document !== "undefined"
     ? createPortal(
         <div
           className={`mobile-backdrop ${isOpen ? "is-visible" : ""}`}
