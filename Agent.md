@@ -124,6 +124,18 @@ npm run lint
 
 ---
 
+## Non-technical collaborator guide
+
+For contributors without a software engineering background, see **[CONTRIBUTING_NON_TECH.md](./CONTRIBUTING_NON_TECH.md)**. It covers:
+
+- Prerequisites (Node.js, Git, GitHub account) with plain-English install instructions
+- First-time project setup via `bash scripts/setup.sh`
+- An interactive git workflow helper (`bash scripts/contribute.sh`) with a plain-English menu
+- Contribution types suited to non-technical collaborators (copy edits, translations, issue reports)
+- AI assistant prompt examples for common tasks
+
+---
+
 ## Things to be careful about
 
 - **Do not** break the `[locale]` dynamic segment — every route must be wrapped by the locale segment for `next-intl` to work.
